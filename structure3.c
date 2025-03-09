@@ -1,18 +1,16 @@
 #include <stdio.h>
 
-struct database{
+struct student{
     int rno;
     char name[20];
     float marks;
-}s[5];
+}s[3];
 
 int main(){
 
-    //struct student s[3]; alternate ways to create objects
+    int i;
 
-    int i, find;
-
-    for(i=1; i<6; i++){
+    for(i=0; i<3; i++){
         printf("Enter rno of student %d: ", i);
         scanf("%d", &s[i].rno);
         printf("Enter name of student %d: ", i);
@@ -21,10 +19,13 @@ int main(){
         printf("Enter marks of student %d: ", i);
         scanf("%f", &s[i].marks);
     }
+        
+    for(i=0; i<3; i++)
+        printf("%d\t", s[i].rno);
 
-    printf("rno\tname\tmarks\n");
+    printf("\n");
 
-    for(i=2; i<7; i=i+2)
-        printf("%d\t%s\t%f\n\n", s[i].rno, s[i].name, s[i].marks);
+    for(i=0; i<3; i++)
+        printf("%d\t", s[i].marks);
 
 }

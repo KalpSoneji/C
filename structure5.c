@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-struct student
-{
+struct student{
     int rno, marks;
     char name[10];
 };
@@ -20,8 +19,8 @@ struct student input(){
 
 void display(struct student s){
     printf("rno: %d\n", s.rno);
-    printf("rno: %s\n", s.name);
-    printf("rno: %d\n", s.marks);
+    printf("Name: %s\n", s.name);
+    printf("Marks: %d\n", s.marks);
 }
 
 int main(){
